@@ -1,5 +1,5 @@
 ## run_analysis.R
-O objetivo deste projeto é demonstrar sua capacidade de coletar, trabalhar com e limpar um conjunto de dados. A meta é preparar dados organizados que possam ser usados para análise posterior.
+**O objetivo deste projeto é demonstrar minha capacidade de coletar, trabalhar com e limpar um conjunto de dados. A meta é preparar dados organizados que possam ser usados para análise posterior.**
 
 ` Etapa 1:` Mesclar os conjuntos de treinamento e teste para criar um conjunto de dados.
 
