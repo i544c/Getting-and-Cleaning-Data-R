@@ -56,7 +56,7 @@ activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names=c("id"
 for (i in seq_len(nrow(activities))) {
   filtered_data$activity[filtered_data$activity == activities[i, "id"]] <- as.character(activities[i, "name"])
 }
-  print(filtered_data$actity)
+  print(filtered_data$activity)
 
 #---- Etapa 4: Rotular adequadamente o conjunto de dados com nomes descritivos de variaveis:
 print("Etapa 4: Rotular adequadamente o conjunto de dados com nomes descritivos de variaveis:")
