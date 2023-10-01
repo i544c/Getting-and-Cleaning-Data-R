@@ -16,7 +16,7 @@
 
 8. `filtered_names`: Variável que armazena os nomes descritivos das colunas após a limpeza e renomeação.
 
-9. `new_data`: Variável que armazena o conjunto de dados final, com a média de cada variável para cada atividade e sujeito.
+9. `tidy_dataset`: Variável que armazena o conjunto de dados final, com a média de cada variável para cada atividade e sujeito.
 
 **Dados e Transformações:**
 
