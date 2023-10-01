@@ -78,10 +78,10 @@ filtered_names <- tolower(filtered_names)
 #---- Etapa 5: A partir do conjunto de dados da etapa 4, crie um segundo conjunto de dados independente e organizado com a media de cada variavel para cada atividade e cada sujeito:
 print("A partir do conjunto de dados da etapa 4, crie um segundo conjunto de dados independente e organizado com a media de cada variavel para cada atividade e cada sujeito:")
 
-new_data <- tbl_df(filtered_data) %>%
+tidy_dataset <- tbl_df(filtered_data) %>%
   group_by(subject, activity) %>%
   summarise_each(funs(mean))
-  print(new_data)
+  print(tidy_dataset)
 
 # Salvar "new_data" na pasta:
-  write.table(new_data, file="new_data.txt", row.name=FALSE)
+  write.table(tidy_dataset, file="tidy_dataset.txt", row.name=FALSE)
