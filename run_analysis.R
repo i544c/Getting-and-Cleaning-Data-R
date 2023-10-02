@@ -14,8 +14,8 @@ pacman::p_load (pacman,		# pacman = package manager
                 tidyverse	# tidyverse = set of tools for Data Science
 )
 
-#---- Data Base: Human Activity Recognition Using Smartphones Dataset
-#---- Link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+#---- Data Base: Human Activity Recognition Using Smartphones Dataset:
+    # Link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 #---- Step 1: Merge the training and testing sets to create a dataset:
 
