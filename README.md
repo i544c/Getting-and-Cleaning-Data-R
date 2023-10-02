@@ -1,14 +1,14 @@
 ## Johns Hopkins University - Data Science - Getting and Cleaning Data
 **Human Activity Recognition Using Smartphones Dataset** (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
-**O objetivo deste projeto é demonstrar minha capacidade de coletar, trabalhar com e limpar um conjunto de dados. A meta é preparar dados organizados que possam ser usados para análise posterior.**
+**The purpose of this project is to demonstrate my ability to collect, work with, and clean a dataset. The goal is to prepare organized data that can be used for further analysis.**
 
-` Etapa 1:` Mesclar os conjuntos de treinamento e teste para criar um conjunto de dados.
+` Step 1: ` Merge the training and testing sets to create a dataset.
 
-` Etapa 2:` Extrair somente as medidas sobre a média e o desvio padrão de cada medida. 
+` Step 2: ` Extract only the measurements about the mean and standard deviation of each measurement.
 
-` Etapa 3:` Usar nomes descritivos de atividades para nomear as atividades no conjunto de dados
+` Step 3: ` Use descriptive activity names to name the activities in the dataset
 
-` Etapa 4:` Rotular adequadamente o conjunto de dados com nomes descritivos de variáveis. 
+` Step 4: ` Appropriately label the dataset with descriptive variable names.
 
-` Etapa 5:` A partir do conjunto de dados da etapa 4, crie um segundo conjunto de dados independente e organizado com a média de cada variável para cada atividade e cada sujeito.
+` Step 5: ` From the data set from step 4, create a second independent and organized data set with the mean of each variable for each activity and each subject.
