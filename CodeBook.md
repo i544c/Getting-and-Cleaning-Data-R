@@ -1,35 +1,33 @@
-**Variáveis:**
+**Variables:**
 
-1. `s_train`, `y_train`, `x_train`: Variáveis que armazenam os dados de treinamento, incluindo os sujeitos (identificação do sujeito), atividades (identificação da atividade) e características (medidas).
+1. `s_train`, `y_train`, `x_train`: Variables that store training data, including subjects (subject identification), activities (activity identification) and features (measurements).
 
-2. `s_test`, `y_test`, `x_test`: Variáveis que armazenam os dados de teste, semelhantes às variáveis de treinamento.
+2. `s_test`, `y_test`, `x_test`: Variables that store test data, similar to training variables.
 
-3. `df`: Variável que armazena o conjunto de dados combinado, onde os dados de treinamento e teste são mesclados.
+3. `df`: Variable that stores the combined dataset, where training and testing data are merged.
 
-4. `feature_names` e `features`: Variáveis que armazenam os nomes das características, lidos a partir do arquivo "features.txt", e uma lista de nomes que inclui "subject" (sujeito), "activity" (atividade) e as características de média e desvio padrão selecionadas.
+4. `feature_names` and `features`: Variables that store the feature names, read from the "features.txt" file, and a list of names that includes "subject", "activity" and the selected mean and standard deviation characteristics.
 
-5. `filtered_feature_index`: Uma variável lógica que indica quais colunas do conjunto de dados `df` devem ser mantidas, com base na presença das palavras "mean", "std", "subject" e "activity" nos nomes das colunas.
+5. `filtered_feature_index`: A logical variable that indicates which columns of the `df` dataset to keep, based on the presence of the words "mean", "std", "subject", and "activity" in the column names.
 
-6. `filtered_data`: Variável que armazena o conjunto de dados resultante após a aplicação do filtro nas colunas do conjunto de dados original.
+6. `filtered_data`: Variable that stores the resulting dataset after applying the filter to the columns of the original dataset.
 
-7. `activities`: Variável que armazena os nomes descritivos das atividades, lidos a partir do arquivo "activity_labels.txt".
+7. `activities`: Variable that stores the descriptive names of activities, read from the "activity_labels.txt" file.
 
-8. `filtered_names`: Variável que armazena os nomes descritivos das colunas após a limpeza e renomeação.
+8. `filtered_names`: Variable that stores the descriptive names of the columns after cleaning and renaming.
 
-9. `tidy_dataset`: Variável que armazena o conjunto de dados final, com a média de cada variável para cada atividade e sujeito.
+9. `tidy_dataset`: Variable that stores the final data set, with the average of each variable for each activity and subject.
 
-**Dados e Transformações:**
+**Data and Transformations:**
 
-1. **Etapa 1 (Mesclar os conjuntos de treinamento e teste):** O código carrega os dados de treinamento e teste para sujeitos, atividades e características. Em seguida, mescla esses dados em um único conjunto de dados chamado `df`.
+1. **Step 1 (Merge the training and testing sets):** The code loads the training and testing data for subjects, activities, and characteristics. It then merges this data into a single dataset called `df`.
 
-2. **Etapa 2 (Extrair medidas de média e desvio padrão):** O código identifica as colunas relevantes no conjunto de dados `df` com base nas palavras-chave "mean", "std", "subject" e "activity". Ele cria uma nova variável chamada `filtered_data` contendo apenas as colunas relevantes.
+2. **Step 2 (Extract Mean and Standard Deviation Measurements):** The code identifies the relevant columns in the `df` dataset based on the keywords "mean", "std", "subject" and " activity". It creates a new variable called `filtered_data` containing only the relevant columns.
 
-3. **Etapa 3 (Usar nomes descritivos de atividades):** Os IDs das atividades no conjunto de dados são substituídos pelos nomes descritivos das atividades lidos a partir do arquivo "activity_labels.txt". Isso é feito para tornar as atividades mais compreensíveis.
+3. **Step 3 (Use descriptive activity names):** The activity IDs in the dataset are replaced with the descriptive activity names read from the "activity_labels.txt" file. This is done to make the activities more understandable.
 
-4. **Etapa 4 (Rotular adequadamente o conjunto de dados com nomes descritivos de variáveis):** Os nomes das colunas são ajustados e limpos para torná-los mais descritivos e legíveis. Isso envolve a remoção de parênteses, substituição de abreviações por palavras completas e conversão para letras minúsculas.
+4. **Step 4 (Properly label the dataset with descriptive variable names):** Column names are adjusted and cleaned up to make them more descriptive and readable. This involves removing parentheses, replacing abbreviations with full words, and converting to lowercase letters.
 
-5. **Etapa 5 (Criar um segundo conjunto de dados com a média de cada variável para cada atividade e cada sujeito):** O código utiliza a biblioteca `dplyr` para agrupar o conjunto de dados `filtered_data` por sujeito e atividade e, em seguida, calcula a média de cada variável para cada grupo. O resultado é armazenado na variável `new_data`.
+5. **Step 5 (Create a second dataset with the mean of each variable for each activity and each subject):** The code uses the `dplyr` library to group the `filtered_data` dataset by subject and activity and then calculates the mean of each variable for each group. The result is stored in the `tidy_dataset` variable. The final dataset `tidy_dataset` is saved in a text file called "new_data.txt" in the current working directory.
 
-6. **Etapa 6 (Salvar o conjunto de dados final):** O conjunto de dados final `new_data` é salvo em um arquivo de texto chamado "new_data.txt" no diretório de trabalho atual.
-
-O código executa essas etapas para limpar e organizar os dados, resultando em um conjunto de dados final que está pronto para análise posterior, com nomes descritivos, atividades identificadas e medidas resumidas com médias por atividade e sujeito.
+The code performs these steps to clean and organize the data, resulting in a final dataset that is ready for further analysis, with descriptive names, identified activities, and summary measures with averages by activity and subject.
