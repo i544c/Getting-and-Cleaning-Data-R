@@ -83,7 +83,8 @@ filtered_names <- tolower(filtered_names)
 tidy_dataset <- tbl_df(filtered_data) %>%
   group_by(subject, activity) %>%
   summarise_each(funs(mean))
-  print(tidy_dataset)
+  
+  head(tidy_dataset) # data verification
 
-# Save "tidy_dataset" in folder:
+# Save "tidy_dataset" in the folder:
   write.table(tidy_dataset, file="tidy_dataset.txt", row.name=FALSE)
